@@ -17,3 +17,16 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+- task: TerraformCLI@2
+  inputs:
+    command: 'init'
+    backendType: 'azurerm'
+    backendServiceArm: 'deyanConnection'
+    ensureBackend: true
+    backendAzureRmResourceGroupName: 'deyanRG'
+    backendAzureRmResourceGroupLocation: 'westeurope'
+    backendAzureRmStorageAccountName: 'deyanstra123'
+    backendAzureRmStorageAccountSku: 'Standard_LRS'
+    backendAzureRmContainerName: 'deyanstracontainer123'
+    allowTelemetryCollection: true
