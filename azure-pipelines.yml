@@ -22,7 +22,7 @@ steps:
 - task: TerraformCLI@2
   inputs:
     command: 'init'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/azure/kubernetes'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/azure/backend'
     backendType: 'azurerm'
     backendServiceArm: 'deyanConnection'
     ensureBackend: true
